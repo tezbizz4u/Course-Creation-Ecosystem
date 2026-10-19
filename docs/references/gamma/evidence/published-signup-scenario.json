@@ -1,0 +1,24 @@
+{
+  "browser": {
+    "mode": "connect",
+    "cdp_endpoint": "http://127.0.0.1:9333",
+    "target_id": "8F41EA1E6DF0E046B131DED70FE1607F"
+  },
+  "start_url": {
+    "url": "https://gamma.app/signup"
+  },
+  "actions": [
+    {
+      "step_id": "public-page-settle",
+      "action": "wait_for_timeout",
+      "duration_ms": 2000
+    }
+  ],
+  "capture": {
+    "at_end": [
+      "dom",
+      "accessibility",
+      "url"
+    ]
+  }
+}

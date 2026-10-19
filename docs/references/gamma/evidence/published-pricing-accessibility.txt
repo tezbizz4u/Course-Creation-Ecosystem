@@ -1,0 +1,242 @@
+- document:
+  - link:
+    - /url: /
+    - img
+  - button "Products"
+  - button "Solutions"
+  - link "About":
+    - /url: /about
+  - link "Pricing":
+    - /url: /pricing
+  - button "English"
+  - link "Login":
+    - /url: /signin
+  - link "Start for free":
+    - /url: /signup
+  - heading "Choose the plan that’s right for you" [level=1]
+  - group:
+    - button "Individual"
+    - button "Business"
+  - paragraph
+  - group:
+    - button "Pay monthly"
+    - button "Pay annually" [pressed]
+  - text: No credit card required
+  - heading "Free" [level=2]
+  - paragraph: For simple projects and getting to know Gamma
+  - separator
+  - link "Start for free":
+    - /url: /signup
+  - list:
+    - listitem: 400 credits at signup
+  - paragraph: "Free includes:"
+  - list:
+    - listitem: Create up to 10 slides per prompt
+    - listitem: Simple presentations, docs, websites, social, and images
+    - listitem: Import from PDF & PPTX
+    - listitem: Export to PDF, PPTX, PNG & Google Slides
+  - heading "Plus" [level=2]
+  - paragraph: For extra AI power and removing Gamma branding
+  - separator
+  - link "Get started":
+    - /url: /signup
+  - list:
+    - listitem: Unlimited AI creations
+  - paragraph: "Everything in Free, and:"
+  - list:
+    - listitem: Create up to 100 slides per prompt
+    - listitem: Remove Gamma branding
+    - listitem: Advanced AI image models
+  - text: Most popular
+  - heading "Pro" [level=2]
+  - paragraph: For premium AI models, API, and more customization
+  - separator
+  - link "Get started":
+    - /url: /signup
+  - list:
+    - listitem: Unlimited AI creations
+  - paragraph: "Everything in Plus, and:"
+  - list:
+    - listitem: Premium AI image models
+    - listitem: Custom branding
+    - listitem: Detailed analytics & advanced sharing
+    - listitem: Publish up to 10 custom domains
+    - listitem: API access
+  - heading "Ultra" [level=2]
+  - paragraph: For 20× more AI usage and unlocking access to the most advanced models
+  - separator
+  - link "Get started":
+    - /url: /signup
+  - list:
+    - listitem: Unlimited AI creations
+  - paragraph: "Everything in Pro, and:"
+  - list:
+    - listitem: Access to the most advanced AI models (text, image, video)
+    - listitem: Publish up to 100 custom domains
+    - listitem: Early access to new features
+  - paragraph:
+    - emphasis: "* Unlimited AI creations refers to everyday use under fair use. Premium features (Agent, advanced models, & API) require credits"
+  - paragraph: Prices are subject to tax depending on your location.
+  - link "SOC 2 compliant":
+    - /url: https://www.aicpa.org/soc4so
+    - img "SOC 2 compliant"
+  - paragraph:
+    - text: We're a
+    - strong: SOC 2 Type II
+    - text: compliant organization.
+  - paragraph:
+    - text: Learn more at our
+    - link "Trust Center":
+      - /url: https://trust.gamma.app
+  - heading "Frequently asked questions" [level=2]
+  - button "What AI models does Gamma use?":
+    - text: What AI models does Gamma use?
+    - img
+  - button "What are AI credits?":
+    - text: What are AI credits?
+    - img
+  - button "How can I get more AI credits?":
+    - text: How can I get more AI credits?
+    - img
+  - button "Can I use Gamma with PowerPoint?":
+    - text: Can I use Gamma with PowerPoint?
+    - img
+  - button "Is there a discount on annual billing?":
+    - text: Is there a discount on annual billing?
+    - img
+  - button "Can I change my plan or cancel at any time?":
+    - text: Can I change my plan or cancel at any time?
+    - img
+  - button "What payment methods are accepted?":
+    - text: What payment methods are accepted?
+    - img
+  - button "How do I get charged when adding a member to my workspace?":
+    - text: How do I get charged when adding a member to my workspace?
+    - img
+  - button "What happens to my content if I downgrade or cancel my subscription?":
+    - text: What happens to my content if I downgrade or cancel my subscription?
+    - img
+  - button "Can I create my own company-branded theme in Gamma?":
+    - text: Can I create my own company-branded theme in Gamma?
+    - img
+  - button "What is the public API?":
+    - text: What is the public API?
+    - img
+  - img "Footer Logo Gradient"
+  - separator
+  - heading "Product" [level=3]
+  - list:
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+    - listitem:
+      - link "Inspiration":
+        - /url: /inspiration
+    - listitem:
+      - link "Education":
+        - /url: https://lab.gamma.app/
+    - listitem:
+      - link "Prompt guide":
+        - /url: /prompts
+    - listitem:
+      - link "Insights":
+        - /url: /insights
+    - listitem:
+      - link "Templates":
+        - /url: /templates
+    - listitem:
+      - link "Explore":
+        - /url: /explore
+    - listitem:
+      - link "Integrations":
+        - /url: /integrations
+    - listitem:
+      - link "Accessibility":
+        - /url: /accessibility
+  - heading "Company" [level=3]
+  - list:
+    - listitem:
+      - link "About":
+        - /url: /about
+    - listitem:
+      - link "Careers":
+        - /url: https://careers.gamma.app
+    - listitem:
+      - link "Team":
+        - /url: https://team.gamma.app
+    - listitem:
+      - link "Help":
+        - /url: https://help.gamma.app
+    - listitem:
+      - link "Community":
+        - /url: /community
+    - listitem:
+      - link "Developer docs":
+        - /url: https://developers.gamma.app/
+    - listitem:
+      - link "Brand":
+        - /url: https://brand.gamma.app
+    - listitem:
+      - link "Trust center":
+        - /url: https://trust.gamma.app
+    - listitem:
+      - link "Contact us":
+        - /url: mailto:support@gamma.app
+  - heading "Social" [level=3]
+  - list:
+    - listitem:
+      - link "Instagram":
+        - /url: https://www.instagram.com/meetgamma/
+    - listitem:
+      - link "LinkedIn":
+        - /url: https://www.linkedin.com/company/gamma-app/
+    - listitem:
+      - link "TikTok":
+        - /url: https://www.tiktok.com/@gamma.app
+    - listitem:
+      - link "X":
+        - /url: https://x.com/gammaapp
+    - listitem:
+      - link "YouTube":
+        - /url: https://www.youtube.com/@meetgamma
+  - heading "Legal" [level=3]:
+    - link "Legal":
+      - /url: /legal
+  - list:
+    - listitem:
+      - link "Acceptable Use Policy":
+        - /url: /acceptable-use-policy
+    - listitem:
+      - link "Cookie Notice":
+        - /url: /cookie-notice
+    - listitem: Cookie Preferences
+    - listitem:
+      - link "Data Processing Addendum":
+        - /url: /dpa
+    - listitem:
+      - link "Privacy Policy":
+        - /url: /privacy
+    - listitem:
+      - link "Subprocessors":
+        - /url: /subprocessors
+    - listitem:
+      - link "Terms of Service":
+        - /url: /terms
+    - listitem:
+      - link "Third Party Terms":
+        - /url: /third-party-terms
+  - heading "Get the app" [level=3]
+  - link "Download on the App Store":
+    - /url: https://apps.apple.com/us/app/gamma-app/id6768404578
+    - img "Download on the App Store"
+  - link "Get it on Google Play":
+    - /url: https://play.google.com/store/apps/details?id=app.gamma.mobile
+    - img "Get it on Google Play"
+  - paragraph: © 2026 Gamma Tech, Inc.
+  - alert
+  - region "Notifications-top"
+  - region "Notifications-top-left"
+  - region "Notifications-top-right"
+  - region "Notifications-bottom-left"
+  - region "Notifications-bottom"
+  - region "Notifications-bottom-right"

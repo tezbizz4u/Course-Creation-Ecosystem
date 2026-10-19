@@ -4,7 +4,7 @@
   "requested_url": "https://gamma.app/",
   "recorded_on": "2026-10-19",
   "method": "REA capture-browser-scenario CLI, pinned source a0edd145d31ffeb9f022c25ec9e9131083f563d5",
-  "status": "blocked",
+  "status": "partial",
   "result_code": "execution_failure",
   "completed_steps": 0,
   "browser_cleanup": "terminated-owned-process",
@@ -19,9 +19,97 @@
     }
   ],
   "limitations": [
-    "No successful product-page or editor interaction was captured.",
-    "Direct HTTPS connectivity check returned a proxy tunnel 403 Forbidden.",
-    "Saved network configuration additions do not prove live access is applied.",
-    "Authentication-required and paid-plan features are unverified."
+    "Initial failure records remain historical; main-site HTTP now returns 200.",
+    "Public feature statements are advertised capabilities, not verified editor behavior.",
+    "Creation redirects to sign-in; no authenticated target browser session is available.",
+    "Templates, prompts, integrations and accessibility paths displayed a 404 page despite home-page links.",
+    "No generation, editor, collaboration or export workflow has been exercised."
+  ],
+  "current_result": "Public browser capture successful after publication; create redirects to sign-in.",
+  "published_evidence": [
+    {
+      "page": "home",
+      "evidence_id": "ev_a45bcf79cba7534eec712d560222430c62a4704ccbd86d883a91b16c25f8a1dd",
+      "file": "published-home-result.json",
+      "sha256": "7c94fd3af60f837794a86898e8e7d9994b8920d543855be65a68882ea2e6e0a9",
+      "final_url": "https://gamma.app/"
+    },
+    {
+      "page": "signup",
+      "evidence_id": "ev_248129212a21b3c35e9135b73393f7224608e314f99e42cb061e035edac3eade",
+      "file": "published-signup-result.json",
+      "sha256": "41f0ceaa93a7b5fd8002ea0159444152ba7ae99ef6aea9c6cf4586b5c77e639a",
+      "final_url": "https://gamma.app/signup"
+    },
+    {
+      "page": "pricing",
+      "evidence_id": "ev_ed17c6c4b5c558eea4275b69e84a02da3f5e23d5c107f60ecb077fc03dc5f569",
+      "file": "published-pricing-result.json",
+      "sha256": "8dea395300ba3aa96bf02c4d7bded445f006413b284efb43f59ef7c4237e384d",
+      "final_url": "https://gamma.app/pricing"
+    },
+    {
+      "page": "templates",
+      "evidence_id": "ev_f071285616a76573da7163774c85814f3dc0f71f3685dc668d75779c22c531d2",
+      "file": "published-templates-result.json",
+      "sha256": "45fe567f23d61c0a2f48e8221eb25beb2347a45e19aca9d7702597d03ea30d1e",
+      "final_url": "https://gamma.app/templates"
+    },
+    {
+      "page": "prompts",
+      "evidence_id": "ev_311a615ad8c01f6ffb9e52e4c6750a091041981cadbc064e409a1de39ee46f41",
+      "file": "published-prompts-result.json",
+      "sha256": "64b6507cd3c4850d5b83b113de4f187825a39ca7139dfdac9946e976d16466bc",
+      "final_url": "https://gamma.app/prompts"
+    },
+    {
+      "page": "integrations",
+      "evidence_id": "ev_cd012f6f11623a3a250e726dd34d430308baa6f81e8ac70ec89666f831f9167f",
+      "file": "published-integrations-result.json",
+      "sha256": "dd65472a0ea5752883ac7d45524f65253556390c2e9e7f5f0a24c409f80dffb4",
+      "final_url": "https://gamma.app/integrations"
+    },
+    {
+      "page": "accessibility",
+      "evidence_id": "ev_d726364e1ee3a2bc946b8644036899d93352275d1097b65b591d83cd14a4630d",
+      "file": "published-accessibility-result.json",
+      "sha256": "56317aee698575f4b99269c32c0a98902d12455076dd651509a197363b0e6ec3",
+      "final_url": "https://gamma.app/accessibility"
+    },
+    {
+      "page": "create",
+      "evidence_id": "ev_a618650a80a0a79c5bca8c3f04e2ade3a6a321500029af6ad264b1a3b69b7bdc",
+      "file": "published-create-result.json",
+      "sha256": "b5bdb56921e18a94b23a86c17c1fbcae7cb2c2f7be469b7fd107090d127374f1",
+      "final_url": "https://gamma.app/signin?redirect_to=https%3A%2F%2Fgamma.app%2Fcreate"
+    },
+    {
+      "page": "products-api",
+      "evidence_id": "ev_04a1c65b37e001bd24f8f6891ae8a64b8a08110224af4a05ae23cea69e2f9585",
+      "file": "published-products-api-result.json",
+      "sha256": "480931db04e88cc581416fd9d55b6cedb0ec69936d41b2791a62f2039d9a83ae",
+      "final_url": "https://gamma.app/products/api"
+    },
+    {
+      "page": "products-documents",
+      "evidence_id": "ev_18ec9342240071183a614b60a36721a74ec6d64b5196dd4304f3b8069b2cf2c6",
+      "file": "published-products-documents-result.json",
+      "sha256": "431b7a78d5de55d8a5784d82e0cd511547d7a5b08a78c610674fcb39901c8b3b",
+      "final_url": "https://gamma.app/products/documents"
+    },
+    {
+      "page": "products-graphics",
+      "evidence_id": "ev_31575496892328484fb2a842ea4e7c357dfa33252eabe445340c521e841e9b0c",
+      "file": "published-products-graphics-result.json",
+      "sha256": "7bae983fdcf8817b4f89000eeb7b12ed8be1073080956bc7d726bd2ac676a35b",
+      "final_url": "https://gamma.app/products/graphics"
+    },
+    {
+      "page": "products-presentations",
+      "evidence_id": "ev_4326d1e6ef4c3542bff163fb6c52385686ffe0c95b20e6acd6acaf83f8268fc2",
+      "file": "published-products-presentations-result.json",
+      "sha256": "242237ba1e6b55dc3dbcd75d5ebc8f8fee9de37201e201bed8c8ac064e49fdcf",
+      "final_url": "https://gamma.app/products/presentations"
+    }
   ]
 }

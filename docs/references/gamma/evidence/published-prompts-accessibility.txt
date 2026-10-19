@@ -1,0 +1,16 @@
+- document:
+  - link:
+    - /url: /
+    - img
+  - button "English"
+  - img "Surprised cat holding a magnifying glass"
+  - heading "You've wandered off the map" [level=2]
+  - paragraph: This page doesn't seem to exist (404).
+  - button "Go home"
+  - alert
+  - region "Notifications-top"
+  - region "Notifications-top-left"
+  - region "Notifications-top-right"
+  - region "Notifications-bottom-left"
+  - region "Notifications-bottom"
+  - region "Notifications-bottom-right"

@@ -1,0 +1,24 @@
+{
+  "browser": {
+    "mode": "connect",
+    "cdp_endpoint": "http://127.0.0.1:9333",
+    "target_id": "E6EB6D76F13886824B0F032D7F522CA2"
+  },
+  "start_url": {
+    "url": "https://gamma.app/products/presentations"
+  },
+  "actions": [
+    {
+      "step_id": "public-page-settle",
+      "action": "wait_for_timeout",
+      "duration_ms": 2000
+    }
+  ],
+  "capture": {
+    "at_end": [
+      "dom",
+      "accessibility",
+      "url"
+    ]
+  }
+}

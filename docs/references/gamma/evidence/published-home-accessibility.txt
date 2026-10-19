@@ -1,0 +1,390 @@
+- document:
+  - link:
+    - /url: /
+    - img
+  - button "Products"
+  - button "Solutions"
+  - link "About":
+    - /url: /about
+  - link "Pricing":
+    - /url: /pricing
+  - button "English"
+  - link "Login":
+    - /url: /signin
+  - link "Start for free":
+    - /url: /signup
+  - heading "Visual storytelling without limits." [level=1]
+  - paragraph: Gamma is the visual communication platform for presentations, documents, and more, with an expert AI agent that knows your goals.
+  - link "Start for free":
+    - /url: /signup
+  - group "Use this template"
+  - group "Use this template"
+  - group "Sign up to create yours"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - group "Use this template"
+  - heading "We rebuilt how Gamma thinks, designs, and edits." [level=2]
+  - text: Brainstorm
+  - heading "Meet your new creative partner." [level=3]
+  - paragraph: Any AI tool can make slides. Gamma's agent orchestrates the best models for each part of the job, so every deck gets a sharper story, a wider visual range, and edits that respect the goal.
+  - list:
+    - listitem:
+      - paragraph: Starts with a conversation
+    - listitem:
+      - paragraph: Outlines first, so you shape the story
+    - listitem:
+      - paragraph: Iterates in chat, right beside your deck
+  - link "Start for free":
+    - /url: /signup
+  - text: Design
+  - heading "A different look for any story." [level=3]
+  - paragraph: Describe the style, share inspiration, or let Gamma choose a look that fits your goal. High-taste visual output so your content doesn't look generic.
+  - list:
+    - listitem:
+      - paragraph: Describe a style, or attach inspiration from anywhere
+    - listitem:
+      - paragraph: Matched to your content, audience, and brand
+    - listitem:
+      - paragraph: Visual range you didn't know was possible
+  - link "Start for free":
+    - /url: /signup
+  - text: Refine
+  - heading "Edit any way you want." [level=3]
+  - paragraph: Ask Gamma's agent for changes, drop in smart layouts, or move anything anywhere with freeform editing. Move between them whenever you want. You never have to pick one.
+  - list:
+    - listitem:
+      - paragraph: Ask, drag, or drop in a smart layout
+    - listitem:
+      - paragraph: Break out into full freeform design mode
+    - listitem:
+      - paragraph: Custom instructions, brand controls, and workspace templates
+  - link "Start for free":
+    - /url: /signup
+  - text: Connect
+  - heading "Import. Export. Connect all your tools." [level=3]
+  - paragraph: Import PowerPoints and PDFs and they arrive the way you built them. Pull real content from Slack, Notion, Dropbox, and 25+ tools. Start in Claude, ChatGPT, or Slack. Export with high fidelity.
+  - list:
+    - listitem:
+      - paragraph: PowerPoint and PDF import, formatting intact
+    - listitem:
+      - paragraph: 25+ connectors, your existing content throughout
+    - listitem:
+      - paragraph: Export to PowerPoint, PDF, and more
+  - link "Start for free":
+    - /url: /signup
+  - heading "One idea, every format, all in your brand style." [level=2]
+  - text: Presentations
+  - heading "Decks that wow the room." [level=3]:
+    - link "Decks that wow the room.":
+      - /url: /products/presentations
+  - paragraph: Your story, your style. Clean export to PowerPoint, PDF, and more.
+  - text: Documents
+  - heading "Docs that draw you in." [level=3]:
+    - link "Docs that draw you in.":
+      - /url: /products/documents
+  - paragraph: "One-pagers to white papers: on-brand, structured and visual, ready to share."
+  - text: Social media visuals
+  - heading "Polished and ready to publish." [level=3]:
+    - link "Polished and ready to publish.":
+      - /url: /products/social-media
+  - paragraph: Carousels and graphics sized for every platform, in your brand.
+  - text: Websites
+  - heading "A live site in minutes." [level=3]:
+    - link "A live site in minutes.":
+      - /url: /products/websites
+  - paragraph: Prompt it, publish it, share the link.
+  - text: API
+  - heading "Gamma, inside your product." [level=3]:
+    - link "Gamma, inside your product.":
+      - /url: /products/api
+  - paragraph: Automate creation and editing, then scale what your team makes.
+  - text: AI-generated images
+  - heading "The best image models, built in." [level=3]:
+    - link "The best image models, built in.":
+      - /url: /products/graphics
+  - paragraph: Infographics, illustrations, and on-brand visuals, editable right where you work.
+  - heading "Innovation guided by our customers" [level=2]
+  - paragraph: Leaders from IBM, Mastercard, Novartis and more help shape what we build.
+  - group: Learn more
+  - img "Bruno Aziza"
+  - heading "IBM" [level=3]
+  - paragraph: Bruno Aziza
+  - paragraph: Group Vice President, Data, Analytics and AI
+  - img "Jennifer Brant-Gargan"
+  - heading "Northeastern University" [level=3]
+  - paragraph: Jennifer Brant-Gargan
+  - paragraph: Chief Information Officer
+  - img "Shawn Bower"
+  - heading "The New York Times" [level=3]
+  - paragraph: Shawn Bower
+  - paragraph: Chief Information Security Officer and Head of Enterprise Technology
+  - img "Ilona Logvinova"
+  - heading "HSF Kramer" [level=3]
+  - paragraph: Ilona Logvinova
+  - paragraph: Chief AI Officer
+  - img "Irena Muren"
+  - heading "Novartis" [level=3]
+  - paragraph: Irena Muren
+  - paragraph: Head of DD&IT Operational Excellence and Planning and Head of DD&IT AI PMO, Novartis
+  - img "Radhika Sharma"
+  - heading "The Cigna Group" [level=3]
+  - paragraph: Radhika Sharma
+  - paragraph: IT Strategy Director, AI Enablement Office
+  - img "Tobias Puehse"
+  - heading "Mastercard" [level=3]
+  - paragraph: Tobias Puehse
+  - paragraph: Senior Vice President, Strategic Partnerships, Marketing and Communications
+  - button "Previous Customer Advisory Board member"
+  - button "Next Customer Advisory Board member"
+  - heading "Join our community of 100+ million users" [level=2]
+  - paragraph: Gamma is changing how the world communicates. Our users include game-changing solopreneurs, gutsy startups, top-tier universities, and impressive global companies.
+  - img "avatar"
+  - paragraph:
+    - text: Beyond saving me hours of labor that I now channel into more meaningful work,
+    - strong: Gamma has made me something of a campus hero!
+  - paragraph: Christina Salazar, English Language Development Teacher
+  - img "avatar"
+  - paragraph:
+    - text: No matter what I create, Gamma is the home for my best complex ideas,
+    - strong: expressed beautifully and with elegance
+    - text: .
+  - paragraph: Jordan Crawford, Founder
+  - img "avatar"
+  - paragraph:
+    - text: Gamma has been
+    - strong: a game-changer for internal collaboration
+    - text: ", eliminating our startup's reliance on traditional slides and documents."
+  - paragraph: Young Zhao, Founder
+  - img "avatar"
+  - paragraph:
+    - text: Gamma is our choice. You've created
+    - strong: the perfect balance between customizability and fast workflow
+    - text: .
+  - paragraph: Jeff Shuck, Principal Consultant
+  - img "avatar"
+  - paragraph:
+    - strong: This product rocks!
+    - text: I no longer use Google Slides — it just seems so prehistoric compared to Gamma!
+  - paragraph: Denise Penn, Social Media Content Creator
+  - img "avatar"
+  - paragraph:
+    - text: Gamma got rid of the website design bottleneck; now our pages pop up
+    - strong: fast, on brand, and ready to rock
+    - text: .
+  - paragraph: Darby Rollins, Founder and Educator
+  - img "avatar"
+  - paragraph:
+    - text: Gamma has forever changed how I make presentations...
+    - strong: I'm now able to turn any of those into a stand-alone website with just a few clicks
+    - text: .
+  - paragraph: Matthew Fried, Coach
+  - img "avatar"
+  - paragraph:
+    - text: Gamma has helped us raise our Pre-Seed round , and we use their website builder to
+    - strong: quickly run and validate ideas!
+  - paragraph: Aibek Yegemberdin, Founder
+  - img "avatar"
+  - paragraph:
+    - strong: Every chance I get, I talk about Gamma
+    - text: — I call it a magic moment, a dopamine moment. Thank you so much for creating such a fantastic tool!
+  - paragraph: Zohar Urian, Consultant
+  - img "avatar"
+  - paragraph:
+    - text: Gamma saves not only time but heartache. All those hours trying to get a presentation or document to look good are gone.
+    - strong: We would never go back
+    - text: .
+  - paragraph: Antony Mayfield, Founder
+  - img "avatar"
+  - paragraph:
+    - text: Gamma has revolutionized how we create high-impact proposals. It's like having
+    - strong: a top-tier designer and strategist in one tool
+    - text: .
+  - paragraph: Stacie Sussman, CRO/Consultant
+  - img "avatar"
+  - paragraph:
+    - text: Gamma has become an essential tool for all of my work.
+    - strong: I can't imagine not using Gamma every time I have an important presentation
+    - text: .
+  - paragraph: Aaron Baughman, Educator
+  - img "avatar"
+  - paragraph:
+    - text: Gamma has reignited my love for creating presentations —
+    - strong: it's brilliant, fun, and the output is incredible
+    - text: .
+  - paragraph: Loree Lash-Valencia, Fractional CRO
+  - img "avatar"
+  - paragraph:
+    - strong: It's never been easier
+    - text: for me to create a presentation quickly, easily, and share it with the world.
+  - paragraph: Dean Fiacco, Consultant
+  - img "avatar"
+  - paragraph:
+    - strong: No more blank page syndrome or wasting hours on design
+    - text: . Gamma helps me structure my ideas, shape my message, and present everything in a clean, professional way.
+  - paragraph: Hernán Giambastiani, Founder
+  - img "avatar"
+  - paragraph:
+    - text: Gamma frees me from the technical side of design and lets me focus on
+    - strong: what really matters
+    - text: — creating engaging, effective learning experiences for my students.
+  - paragraph: Christian Yao, Educator
+  - img "avatar"
+  - paragraph:
+    - text: The ability to
+    - strong: co-create with AI
+    - text: to
+    - strong: instantly mockup and visualize my presentation ideas
+    - text: is what makes Gamma so powerful for me and is why I keep coming back to it.
+  - paragraph: Matthias Rossini, Founder
+  - button "Previous"
+  - button "Next"
+  - heading "Frequently asked questions" [level=2]
+  - paragraph:
+    - text: Can't find the answer you're looking for? Email us at
+    - link "support@gamma.app":
+      - /url: mailto:support@gamma.app
+    - text: .
+  - button "Can I use Gamma for free?"
+  - button "What can I create with Gamma?"
+  - button "How can I create beautifully designed, on-brand presentations with AI?"
+  - button "Can I import and export PowerPoint presentations with Gamma?"
+  - button "Can I use Gamma with my team?"
+  - button "How do sharing and collaboration work?"
+  - button "Can I connect my other tools and AI agents to Gamma?"
+  - button "Does Gamma train on my data?"
+  - heading "How good ideas get into the universe." [level=2]
+  - link "Start for free":
+    - /url: /signup
+  - img
+  - img "Footer Logo Gradient"
+  - separator
+  - heading "Product" [level=3]
+  - list:
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+    - listitem:
+      - link "Inspiration":
+        - /url: /inspiration
+    - listitem:
+      - link "Education":
+        - /url: https://lab.gamma.app/
+    - listitem:
+      - link "Prompt guide":
+        - /url: /prompts
+    - listitem:
+      - link "Insights":
+        - /url: /insights
+    - listitem:
+      - link "Templates":
+        - /url: /templates
+    - listitem:
+      - link "Explore":
+        - /url: /explore
+    - listitem:
+      - link "Integrations":
+        - /url: /integrations
+    - listitem:
+      - link "Accessibility":
+        - /url: /accessibility
+  - heading "Company" [level=3]
+  - list:
+    - listitem:
+      - link "About":
+        - /url: /about
+    - listitem:
+      - link "Careers":
+        - /url: https://careers.gamma.app
+    - listitem:
+      - link "Team":
+        - /url: https://team.gamma.app
+    - listitem:
+      - link "Help":
+        - /url: https://help.gamma.app
+    - listitem:
+      - link "Community":
+        - /url: /community
+    - listitem:
+      - link "Developer docs":
+        - /url: https://developers.gamma.app/
+    - listitem:
+      - link "Brand":
+        - /url: https://brand.gamma.app
+    - listitem:
+      - link "Trust center":
+        - /url: https://trust.gamma.app
+    - listitem:
+      - link "Contact us":
+        - /url: mailto:support@gamma.app
+  - heading "Social" [level=3]
+  - list:
+    - listitem:
+      - link "Instagram":
+        - /url: https://www.instagram.com/meetgamma/
+    - listitem:
+      - link "LinkedIn":
+        - /url: https://www.linkedin.com/company/gamma-app/
+    - listitem:
+      - link "TikTok":
+        - /url: https://www.tiktok.com/@gamma.app
+    - listitem:
+      - link "X":
+        - /url: https://x.com/gammaapp
+    - listitem:
+      - link "YouTube":
+        - /url: https://www.youtube.com/@meetgamma
+  - heading "Legal" [level=3]:
+    - link "Legal":
+      - /url: /legal
+  - list:
+    - listitem:
+      - link "Acceptable Use Policy":
+        - /url: /acceptable-use-policy
+    - listitem:
+      - link "Cookie Notice":
+        - /url: /cookie-notice
+    - listitem: Cookie Preferences
+    - listitem:
+      - link "Data Processing Addendum":
+        - /url: /dpa
+    - listitem:
+      - link "Privacy Policy":
+        - /url: /privacy
+    - listitem:
+      - link "Subprocessors":
+        - /url: /subprocessors
+    - listitem:
+      - link "Terms of Service":
+        - /url: /terms
+    - listitem:
+      - link "Third Party Terms":
+        - /url: /third-party-terms
+  - heading "Get the app" [level=3]
+  - link "Download on the App Store":
+    - /url: https://apps.apple.com/us/app/gamma-app/id6768404578
+    - img "Download on the App Store"
+  - link "Get it on Google Play":
+    - /url: https://play.google.com/store/apps/details?id=app.gamma.mobile
+    - img "Get it on Google Play"
+  - paragraph: © 2026 Gamma Tech, Inc.
+  - alert
+  - region "Notifications-top"
+  - region "Notifications-top-left"
+  - region "Notifications-top-right"
+  - region "Notifications-bottom-left"
+  - region "Notifications-bottom"
+  - region "Notifications-bottom-right"
