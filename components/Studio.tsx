@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import type { SlideDocument, SlideElement } from "@/lib/contracts";
 import type { Outline } from "@/lib/ai";
 import Shell from "./Shell";
+import CourseBrief from "./CourseBrief";
 const Canvas = dynamic(() => import("./SlideCanvas"), {
   ssr: false,
   loading: () => <div className="canvas-wrap">Opening the canvas…</div>,
@@ -250,6 +251,7 @@ export default function Studio({
             >
               {exporting ? "Exporting…" : "Export PowerPoint"}
             </button>
+            <CourseBrief courseId={initial.id} />
             <button onClick={history}>Version history</button>
           </div>
         </div>

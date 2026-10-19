@@ -6,6 +6,7 @@ export async function reserveGeneration(
   courseId: string,
   idempotencyKey: string,
   model: string,
+  briefRevision = 0,
 ) {
   const raw = Number(process.env.AI_MAX_REQUESTS_PER_DAY || 5);
   const limit = Number.isSafeInteger(raw) && raw > 0 ? Math.min(raw, 100) : 5;
@@ -57,8 +58,8 @@ export async function reserveGeneration(
         "Workspace-wide daily generation limit reached.",
       );
     await sql.query(
-      "INSERT INTO studio_generations(id,owner_id,course_id,idempotency_key,status,model) VALUES($1,$2,$3,$4,'reserved',$5)",
-      [id, uid, courseId, idempotencyKey, model],
+      "INSERT INTO studio_generations(id,owner_id,course_id,idempotency_key,status,model,brief_revision) VALUES($1,$2,$3,$4,'reserved',$5,$6)",
+      [id, uid, courseId, idempotencyKey, model, briefRevision],
     );
     return null;
   });

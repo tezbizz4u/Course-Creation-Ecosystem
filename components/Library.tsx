@@ -138,7 +138,7 @@ export default function Library({ email }: { email: string }) {
               });
               const result = await r.json();
               if (!r.ok) throw Error(result.error);
-              window.location.href = "/studio/" + result.id;
+              window.location.href = "/studio/" + result.id + "?brief=1";
             } catch (e) {
               setError((e as Error).message);
             } finally {

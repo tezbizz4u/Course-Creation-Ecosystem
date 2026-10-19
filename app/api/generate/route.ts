@@ -1,9 +1,10 @@
+import { getCourseBrief } from "@/lib/course-brief";
 import { reserveGeneration } from "@/lib/generations";
 import { randomUUID } from "node:crypto";
 import { z } from "zod";
 import { body, failure, HTTPError, owner, sameOrigin } from "@/lib/http";
 import { query } from "@/lib/db";
-import { configuredProvider } from "@/lib/ai";
+import { buildGenerationPrompt, configuredProvider } from "@/lib/ai";
 import { courseFor } from "@/lib/courses";
 const input = z.object({
   courseId: z.string().uuid(),
@@ -19,6 +20,19 @@ export async function POST(request: Request) {
     const provider = configuredProvider();
     if (!provider)
       throw new HTTPError(503, "No generation provider is enabled.");
+    const courseBrief = await getCourseBrief(uid, data.courseId);
+    try {
+      buildGenerationPrompt(
+        String(course.title),
+        String(course.audience),
+        courseBrief.brief,
+      );
+    } catch {
+      throw new HTTPError(
+        400,
+        "The saved brief exceeds this generator's current 24,000-character input limit. Condense the generation brief; no provider request was submitted.",
+      );
+    }
     const id = randomUUID();
     const existing = await reserveGeneration(
       id,
@@ -26,12 +40,14 @@ export async function POST(request: Request) {
       data.courseId,
       data.idempotencyKey,
       process.env.AI_MODEL!,
+      courseBrief.revision,
     );
     if (existing) return Response.json({ idempotent: true, outline: existing });
     try {
       const result = await provider.generate(
         String(course.title),
         String(course.audience),
+        courseBrief.brief,
       );
       await query(
         "UPDATE studio_generations SET status='succeeded',result=$1,input_tokens=$2,output_tokens=$3 WHERE id=$4",
@@ -69,7 +85,7 @@ export async function GET(request: Request) {
     return Response.json(
       (
         await query(
-          "SELECT id,status,model,input_tokens,output_tokens,result,error_code,created_at FROM studio_generations WHERE owner_id=$1 AND course_id=$2 ORDER BY created_at DESC LIMIT 20",
+          "SELECT id,status,model,brief_revision,input_tokens,output_tokens,result,error_code,created_at FROM studio_generations WHERE owner_id=$1 AND course_id=$2 ORDER BY created_at DESC LIMIT 20",
           [uid, courseId],
         )
       ).rows,

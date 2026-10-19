@@ -31,7 +31,7 @@ Executed 19 October 2026 in the existing cloud workspace. All results below conc
 
 From `/workspace/Course-Creation-Ecosystem`, activate `/workspace/tools/rea-toolchain/node_modules/.bin` on PATH. Run `bash scripts/setup-application.sh`, then `npm run test:e2e` with port 3000 free. Build the container with `node scripts/build-container.mjs` in this proxy-based cloud workspace, or ordinary `docker build` in an environment with direct registry access.
 
-Test traces and private database snapshots are ignored. Synthetic pilot accounts created by Playwright are isolated to local development; do not copy the local test database into a production deployment. Application source changes are local workspace changes, not a pushed GitHub release.
+Test traces and private database snapshots are ignored. Synthetic pilot accounts created by Playwright are isolated to local development; do not copy the local test database into a production deployment. Application increments are pushed to feat/course-studio-foundation; this is not a production release.
 
 ## Editable PowerPoint increment
 
@@ -40,3 +40,14 @@ Implemented native editable text/shapes, slide dimensions/rotation/backgrounds, 
 Validation: nine backend tests passed, including three PowerPoint cases for editable XML/geometry/media/notes, missing-asset failure and layout warnings. Independent python-pptx read-back reopened the exported two-slide demonstration and verified editable text/shapes and images. The extended Playwright workflow passed actual download, MIME/revision checks and cross-account export rejection. Production build and TypeScript passed. Rendered fidelity in Microsoft PowerPoint/LibreOffice is not yet verified. Text wrapping and rotated bounds require visual review; current preflight warnings cover explicit-line height and unrotated bounds only.
 
 Separate reference investigations are retained under docs/references/gamma, elevenlabs and canva. Actual REA browser attempts failed; direct HTTPS checks returned proxy 403 responses. No product editor observations were obtained. This export increment implements the user's independently specified editable-deck requirement; it is not claimed to reproduce verified Gamma/Canva internals or workflows.
+
+
+## Guided course brief increment
+
+New courses open a five-question brief covering the vision, learning objectives, source notes, design and constraints. Existing courses expose the same dialog through Course brief. Answers persist privately with optimistic revision checks and immutable history. The default audience is Indian AYUSH practitioners, with Indian English and editable PowerPoint as the initial output. Closing an unsaved answer prompts before discarding it; saving temporarily disables editing to prevent input races.
+
+The summary distinguishes captured requirements from pending research, structure, design, quality checks and export. Source notes remain unverified. The optional Gemini adapter receives the saved brief and records its revision; oversized input is rejected before reserving quota or calling the provider. This is requirement capture, not completed autonomous course production.
+
+Validation: 11 backend tests passed, production build and TypeScript passed, and the extended Chromium workflow against PostgreSQL passed. The browser test verifies all five exact answers, reopening, stale-revision rejection, private ownership, editor operations and editable PowerPoint download. No paid provider call was made. Schema additions create brief/history tables and add a generation brief revision without deleting existing courses.
+
+Full reference investigations remain blocked as recorded separately under docs/references. Deployment and rendered PowerPoint fidelity remain unverified.

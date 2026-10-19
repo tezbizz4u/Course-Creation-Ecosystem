@@ -1,6 +1,6 @@
 # Course Creation Ecosystem
 
-An original Next.js, React and TypeScript course studio. The first local application milestone includes private accounts, persistent projects/courses, a React/Konva presentation editor, private images, versioned autosave/history, native editable PowerPoint export, and a configurable Gemini text adapter.
+An original Next.js, React and TypeScript course studio. The first local application milestone includes private accounts, persistent projects/courses, a guided and versioned course brief, a React/Konva presentation editor, private images, versioned autosave/history, native editable PowerPoint export, and a configurable Gemini text adapter.
 
 Confirmed defaults: **CDEM, MASLD, PCOS, Obesity and Hypertension** for **Indian AYUSH practitioners only**, with **Indian English** and **high-quality editable presentations** first. See [course defaults](docs/execution/COURSE-DEFAULTS.md).
 

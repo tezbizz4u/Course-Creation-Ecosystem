@@ -230,3 +230,136 @@ test("concurrent AI quota reservations and idempotency prevent duplicate request
   delete process.env.AI_MAX_GLOBAL_REQUESTS_PER_DAY;
   delete process.env.AI_MAX_REQUESTS_PER_DAY;
 });
+test("course briefs persist independently, reject stale writes and enforce owner boundaries", async () => {
+  const { query } = await import("../lib/db");
+  const { createCourse } = await import("../lib/courses");
+  const { getCourseBrief, saveCourseBrief } =
+    await import("../lib/course-brief");
+  const { courseBriefSchema } = await import("../lib/course-brief-contract");
+  const a = randomUUID(),
+    b = randomUUID();
+  await query(
+    "INSERT INTO studio_users(id,email,password_hash) VALUES($1,$2,$3),($4,$5,$6)",
+    [
+      a,
+      "brief-a@tests.invalid",
+      "unused",
+      b,
+      "brief-b@tests.invalid",
+      "unused",
+    ],
+  );
+  const course = await createCourse(a, {
+    title: "CDEM brief pilot",
+    audience: "Indian AYUSH practitioners",
+    projectTitle: "Pilot",
+  });
+  const original = await getCourseBrief(a, course.id);
+  assert.equal(original.revision, 0);
+  assert.equal(original.brief.language, "English (India)");
+  assert.equal(original.brief.audience, "Indian AYUSH practitioners");
+  const brief = {
+    ...original.brief,
+    vision: "Create an editable lesson with diagrams.",
+    objectives: "Explain the learning objectives clearly.",
+    sourceNotes: "Source material supplied by the educator; not yet verified.",
+  };
+  const writes = await Promise.allSettled([
+    saveCourseBrief(a, course.id, 0, brief),
+    saveCourseBrief(a, course.id, 0, { ...brief, vision: "Different tab" }),
+  ]);
+  assert.equal(writes.filter((w) => w.status === "fulfilled").length, 1);
+  assert.equal(
+    (writes.find((w) => w.status === "rejected") as PromiseRejectedResult)
+      .reason.status,
+    409,
+  );
+  const current = await getCourseBrief(a, course.id);
+  assert.equal(current.revision, 1);
+  assert.equal(
+    current.outline.find((s) => s.id === "research")?.status,
+    "pending",
+  );
+  assert.equal(
+    current.outline.find((s) => s.id === "brief")?.status,
+    "captured",
+  );
+  await assert.rejects(
+    getCourseBrief(b, course.id),
+    (e: Error & { status?: number }) => e.status === 404,
+  );
+  await assert.rejects(
+    saveCourseBrief(b, course.id, 1, brief),
+    (e: Error & { status?: number }) => e.status === 404,
+  );
+  await saveCourseBrief(a, course.id, 1, {
+    ...current.brief,
+    design: "Editable diagrams, consistent typography, clear hierarchy.",
+  });
+  const versions = await query<{ revision: number }>(
+    "SELECT revision FROM studio_brief_versions WHERE course_id=$1 ORDER BY revision",
+    [course.id],
+  );
+  assert.deepEqual(
+    versions.rows.map((r) => r.revision),
+    [1, 2],
+  );
+  assert.equal(
+    courseBriefSchema.safeParse({
+      ...brief,
+      references: [{ title: "Unsafe source", url: "javascript:alert(1)" }],
+    }).success,
+    false,
+  );
+});
+test("generation uses the saved brief as bounded unverified context before calling a provider", async () => {
+  const { buildGenerationPrompt } = await import("../lib/ai");
+  const { newCourseBrief } = await import("../lib/course-brief-contract");
+  const brief = {
+    ...newCourseBrief(),
+    vision: "A CDEM lesson with native editable diagrams",
+    objectives: "Understand the learning objectives",
+    sourceNotes: "Unverified educator notes",
+  };
+  const prompt = buildGenerationPrompt(
+    "CDEM",
+    "Indian AYUSH practitioners",
+    brief,
+  );
+  assert.ok(prompt.includes(brief.vision));
+  assert.ok(prompt.includes(brief.objectives));
+  assert.ok(prompt.includes("Source notes have not been verified"));
+  let calls = 0;
+  const provider = new GeminiProvider(
+    "test-key",
+    "test-model",
+    async (_url, init) => {
+      calls++;
+      const request = JSON.parse(String(init?.body));
+      assert.ok(request.contents[0].parts[0].text.includes(brief.objectives));
+      return Response.json({
+        candidates: [
+          {
+            content: {
+              parts: [
+                {
+                  text: '{"slides":[{"title":"Objectives","body":"Source verification required."}]}',
+                },
+              ],
+            },
+          },
+        ],
+      });
+    },
+  );
+  await provider.generate("CDEM", "Indian AYUSH practitioners", brief);
+  assert.equal(calls, 1);
+  await assert.rejects(
+    provider.generate("CDEM", "Practitioners", {
+      ...brief,
+      vision: "x".repeat(25000),
+    }),
+    /BRIEF_INPUT_TOO_LARGE/,
+  );
+  assert.equal(calls, 1);
+});

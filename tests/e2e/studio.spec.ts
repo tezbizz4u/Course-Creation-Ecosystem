@@ -25,7 +25,7 @@ async function saved(page: Page) {
 test("authenticated course editing, canvas drag, image ownership, history, conflict and disabled AI", async ({
   page,
   browser,
-}) => {
+}, testInfo) => {
   const anonymous = await page.request.get("/api/courses");
   expect(anonymous.status()).toBe(401);
   await signup(page);
@@ -42,8 +42,61 @@ test("authenticated course editing, canvas drag, image ownership, history, confl
       exact: true,
     }),
   ).toBeVisible();
+  await expect(
+    page.getByRole("heading", { name: "Your course, in your words." }),
+  ).toBeVisible();
+  const briefAnswers = [
+    "Create an editable presentation with clear diagrams.",
+    "Explain the principles and apply them to teaching cases.",
+    "Educator notes supplied for review; research is still required.",
+    "Professional clinical teaching deck, clear diagrams, no decorative filler.",
+    "Indian English, editable PowerPoint, approximately 20 minutes.",
+  ];
+  for (let i = 0; i < briefAnswers.length; i++) {
+    await page.getByLabel("Your answer", { exact: true }).fill(briefAnswers[i]);
+    await page
+      .getByRole("button", {
+        name:
+          i === briefAnswers.length - 1 ? "Save brief" : "Save and continue",
+        exact: true,
+      })
+      .click();
+  }
+  await expect(page.getByText(/Brief saved · v5/)).toBeVisible();
+  await page.screenshot({
+    path: testInfo.outputPath("course-brief.png"),
+    fullPage: true,
+  });
+  await expect(
+    page.getByText("research and automatic course production have not run.", {
+      exact: false,
+    }),
+  ).toBeVisible();
+  await page
+    .getByRole("button", { name: "Return to presentation", exact: true })
+    .click();
   await expect(page.locator("canvas")).toBeVisible();
   const courseId = page.url().split("/").pop()!;
+  const capturedBrief = await (
+    await page.request.get("/api/courses/" + courseId + "/brief")
+  ).json();
+  expect(capturedBrief.revision).toBe(5);
+  for (const [i,key] of ['vision','objectives','sourceNotes','design','constraints'].entries()) {
+    expect(capturedBrief.brief[key]).toBe(briefAnswers[i]);
+  }
+  expect(
+    capturedBrief.outline.find((s: { id: string }) => s.id === "research")
+      .status,
+  ).toBe("pending");
+  const staleBrief = await page.request.put(
+    "/api/courses/" + courseId + "/brief",
+    {
+      headers: { Origin: origin },
+      data: { expectedRevision: 0, brief: capturedBrief.brief },
+    },
+  );
+  expect(staleBrief.status()).toBe(409);
+
   await page.getByRole("button", { name: "T   Text" }).click();
   await page.getByLabel("Object text").fill("Learning that lasts");
   await saved(page);
@@ -186,9 +239,20 @@ test("authenticated course editing, canvas drag, image ownership, history, confl
   expect(
     (await second.request.get("/api/courses/" + courseId + "/export")).status(),
   ).toBe(404);
+  expect(
+    (await second.request.get("/api/courses/" + courseId + "/brief")).status(),
+  ).toBe(404);
+  expect(
+    (
+      await second.request.put("/api/courses/" + courseId + "/brief", {
+        headers: { Origin: origin },
+        data: { expectedRevision: 5, brief: capturedBrief.brief },
+      })
+    ).status(),
+  ).toBe(404);
   await second.close();
   await page.screenshot({
-    path: "/workspace/scratch/course-studio.png",
+    path: testInfo.outputPath("course-studio.png"),
     fullPage: true,
   });
 });
