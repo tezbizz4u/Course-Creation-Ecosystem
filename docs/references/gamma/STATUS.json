@@ -1,0 +1,27 @@
+{
+  "target": "Gamma AI",
+  "priority": 1,
+  "requested_url": "https://gamma.app/",
+  "recorded_on": "2026-10-19",
+  "method": "REA capture-browser-scenario CLI, pinned source a0edd145d31ffeb9f022c25ec9e9131083f563d5",
+  "status": "blocked",
+  "result_code": "execution_failure",
+  "completed_steps": 0,
+  "browser_cleanup": "terminated-owned-process",
+  "artifacts": [
+    {
+      "file": "scenario.json",
+      "sha256": "ac9b34da67ae6c55ee12aa8cbfcb00cc6b830cf8c6798f9a0c35b8235bbb0d94"
+    },
+    {
+      "file": "rea-result.json",
+      "sha256": "a13c414b3630f60cb3de6ca94fa3049b102c23f5ce8d92b85755b530ac6b7361"
+    }
+  ],
+  "limitations": [
+    "No successful product-page or editor interaction was captured.",
+    "Direct HTTPS connectivity check returned a proxy tunnel 403 Forbidden.",
+    "Saved network configuration additions do not prove live access is applied.",
+    "Authentication-required and paid-plan features are unverified."
+  ]
+}

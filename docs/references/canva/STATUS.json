@@ -1,0 +1,27 @@
+{
+  "target": "Canva",
+  "priority": 3,
+  "requested_url": "https://www.canva.com/create/presentations/",
+  "recorded_on": "2026-10-19",
+  "method": "REA capture-browser-scenario CLI, pinned source a0edd145d31ffeb9f022c25ec9e9131083f563d5",
+  "status": "blocked",
+  "result_code": "execution_failure",
+  "completed_steps": 0,
+  "browser_cleanup": "terminated-owned-process",
+  "artifacts": [
+    {
+      "file": "scenario.json",
+      "sha256": "d18eda30c66937e21fd9b9afc8a2b2ade6a14b26c40c020bd2b65830410ae956"
+    },
+    {
+      "file": "rea-result.json",
+      "sha256": "586a209b00e35476bd42dab794d16e8dc5700877899d6000769b49a96b604c2e"
+    }
+  ],
+  "limitations": [
+    "No successful product-page or editor interaction was captured.",
+    "Direct HTTPS connectivity check returned a proxy tunnel 403 Forbidden.",
+    "Saved network configuration additions do not prove live access is applied.",
+    "Authentication-required and paid-plan features are unverified."
+  ]
+}

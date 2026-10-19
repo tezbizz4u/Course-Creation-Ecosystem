@@ -1,0 +1,27 @@
+{
+  "target": "ElevenLabs",
+  "priority": 2,
+  "requested_url": "https://elevenlabs.io/",
+  "recorded_on": "2026-10-19",
+  "method": "REA capture-browser-scenario CLI, pinned source a0edd145d31ffeb9f022c25ec9e9131083f563d5",
+  "status": "blocked",
+  "result_code": "execution_failure",
+  "completed_steps": 0,
+  "browser_cleanup": "terminated-owned-process",
+  "artifacts": [
+    {
+      "file": "scenario.json",
+      "sha256": "c1a503afe0cf53c3cff3666264b167f9a08f4cead6f8284fe9776681e181936e"
+    },
+    {
+      "file": "rea-result.json",
+      "sha256": "c940eeea88396d7b62ca87ca8659753d68efa14d9091caf56e06408884a02e16"
+    }
+  ],
+  "limitations": [
+    "No successful product-page or editor interaction was captured.",
+    "Direct HTTPS connectivity check returned a proxy tunnel 403 Forbidden.",
+    "Saved network configuration additions do not prove live access is applied.",
+    "Authentication-required and paid-plan features are unverified."
+  ]
+}
