@@ -11,7 +11,7 @@ const child = spawn(process.execPath, [".next/standalone/server.js"], {
   stdio: "inherit",
   env: {
     ...process.env,
-    HOSTNAME: "127.0.0.1",
+    HOSTNAME: process.env.STUDIO_BIND_ADDRESS || "127.0.0.1",
     STUDIO_STATE_DIR: resolve(root, ".local"),
     LOCAL_DATA_DIR: resolve(root, ".local/database"),
   },

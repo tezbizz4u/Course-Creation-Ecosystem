@@ -58,3 +58,16 @@ A generation is proposed content. The user reviews it before adding slides, and 
 ## Production deployment
 
 See [DEPLOYMENT.md](DEPLOYMENT.md). No paid resources have been created and no live AI request has been sent.
+
+## Google Cloud Shell preview
+
+After cloning and building in Cloud Shell, start the server with:
+
+```sh
+export STUDIO_BIND_ADDRESS=0.0.0.0
+export PORT=3000
+export AUTH_URL="https://3000-${WEB_HOST}"
+npm start
+```
+
+Use Web Preview on port 3000. Leave the process running. If WEB_HOST is unset, copy the actual preview origin into AUTH_URL and restart. The default launcher continues to bind loopback unless STUDIO_BIND_ADDRESS is explicitly supplied. Set AUTH_URL to the browser origin so sign-in and mutation origin checks use the same address.
