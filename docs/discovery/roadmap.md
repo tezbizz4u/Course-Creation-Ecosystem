@@ -1,6 +1,6 @@
 # Prioritized implementation and acceptance
 
-The pasted 8–16-week estimate is a planning hypothesis, not a delivery commitment. Implement in vertical slices and record evidence at each gate.
+This is the earlier discovery roadmap. The current governing plan is [the execution plan](../execution/ACTION-PLAN.md), which follows REA investigation → implementation → testing → deployment without further phase approvals. The pasted 8–16-week estimate remains a planning hypothesis, not a delivery commitment.
 
 ## P0 — Discovery and reproducible foundation
 
@@ -49,4 +49,4 @@ One course before expanding the curriculum; confirm actual course count and prio
 
 ## Scope boundary
 
-REA is a research tool, not the platform or a model. A Canva-like editor and ElevenLabs-like voice workspace are separate engineering workstreams. Do not promise their full capabilities from a first milestone. Discovery approval precedes complete application implementation, as requested by the supplied brief. No paid services are authorized by the existence of a budget allocation alone.
+REA is a research tool, not the platform or a model. A Canva-like editor and ElevenLabs-like voice workspace are separate engineering workstreams. Do not promise their full capabilities from a first milestone. The user has since instructed us to proceed without further phase approvals. Follow the current execution plan and the $200 budget envelope; missing credentials or inaccessible reference features remain concrete prerequisites rather than assumed access.

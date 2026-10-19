@@ -2,6 +2,8 @@
 
 An original Next.js, React and TypeScript course studio. The first local application milestone includes private accounts, persistent projects/courses, a React/Konva presentation editor, private images, versioned autosave/history, and a configurable Gemini text adapter.
 
+Follow the current [execution plan](docs/execution/ACTION-PLAN.md) for REA investigation, implementation, testing and deployment. No further phase approvals are required.
+
 Start with [development instructions](docs/DEVELOPMENT.md), [deployment prerequisites](docs/DEPLOYMENT.md), and the [technical discovery pack](docs/discovery/README.md).
 
 ```sh
