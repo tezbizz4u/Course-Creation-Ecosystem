@@ -36,18 +36,22 @@ Existing work stays intact. Preserve the user's Cloud Shell CDEM data before cha
 
 ## Phase 1 — REA reference investigation
 
-### Target A: Canva (`https://www.canva.com/`)
+### Target A: Gamma AI (`https://gamma.app/`)
 
-Investigate presentation creation and templates; text/shape/image insertion; selection, resize, rotation and layer order; theme changes; tables/charts/diagrams; page duplication/reordering; save/version behavior; and available deck/PDF export workflows. Focus on workflows needed for course creation rather than every Canva product.
+First priority, full scope. Inventory all visible product areas and investigate conversational intake, source/document import, outlines and generated structure, cards/layouts/themes, visual/media generation, revision, sharing, collaboration, presentation/web modes and editable exports. Keep authentication/plan-dependent capabilities explicitly blocked or untested until observed.
 
 ### Target B: ElevenLabs (`https://elevenlabs.io/` and the user's `elevenlabs.com` reference)
 
 Verify the canonical target before observations. Investigate script entry, language/voice selection, pronunciation, generation/preview, clip editing, project organization, captions/alignment, download and any authorized voice-cloning workflow. Do not upload the user's voice or course material to a third party without an existing authorized route.
 
+### Target C: Canva (`https://www.canva.com/`)
+
+Investigate presentation creation and templates; text/shape/image insertion; selection, resize, rotation and layer order; theme changes; tables/charts/diagrams; page duplication/reordering; save/version behavior; and available deck/PDF export workflows. Focus on workflows needed for course creation rather than every Canva product.
+
 ### Method and deliverables
 
 1. Read REA browser/runtime guidance and actual CLI schemas. Use the verified pinned CLI when tools are not connected to the chat; do not repeatedly reinstall or run broad provider diagnostics.
-2. Attempt a focused public-page/browser investigation of each named target. Preserve failures such as network denial, bot challenge or missing authentication as evidence; a marketing page is not proof of editor behavior.
+2. Investigate in the user-specified order: Gamma AI, ElevenLabs, then Canva. Maintain separate findings and raw artifacts under docs/references/<target>/. Attempt a focused public-page/browser investigation of each named target. Preserve failures such as network denial, bot challenge or missing authentication as evidence; a marketing page is not proof of editor behavior.
 3. Create an investigation ledger and capture allowed UI/runtime evidence. Inspect relevant served artifacts through supported REA workflows when available.
 4. Produce `REFERENCE-EVIDENCE.md`, `FEATURE-GAPS.md`, and feature specifications with reproducible acceptance scenarios.
 5. For missing research coverage, proceed with independent verified features. Mark an original design as an original design rather than pretending it reproduces inaccessible behavior.
@@ -116,7 +120,7 @@ Use billing alerts plus application quotas and an operator shutdown runbook. Ale
 
 ## Immediate next actions
 
-1. Create the reference-workflow ledger for Canva and ElevenLabs and attempt focused REA browser investigations.
+1. Maintain the separate reference-workflow ledgers for Gamma AI, ElevenLabs and Canva and attempt focused REA browser investigations.
 2. Record verified observations, access limitations and the gap against the existing studio.
 3. Inspect course reference documents and select a bounded CDEM pilot lesson without modifying originals.
 4. Implement the highest-priority verified gaps through the shared course/AI foundation, then visuals and media.

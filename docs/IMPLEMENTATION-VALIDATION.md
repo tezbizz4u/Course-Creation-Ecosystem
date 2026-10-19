@@ -32,3 +32,11 @@ Executed 19 October 2026 in the existing cloud workspace. All results below conc
 From `/workspace/Course-Creation-Ecosystem`, activate `/workspace/tools/rea-toolchain/node_modules/.bin` on PATH. Run `bash scripts/setup-application.sh`, then `npm run test:e2e` with port 3000 free. Build the container with `node scripts/build-container.mjs` in this proxy-based cloud workspace, or ordinary `docker build` in an environment with direct registry access.
 
 Test traces and private database snapshots are ignored. Synthetic pilot accounts created by Playwright are isolated to local development; do not copy the local test database into a production deployment. Application source changes are local workspace changes, not a pushed GitHub release.
+
+## Editable PowerPoint increment
+
+Implemented native editable text/shapes, slide dimensions/rotation/backgrounds, original embedded PNG/JPEG assets and slide notes using PptxGenJS 4.0.1. Export is authenticated, scopes assets to the course owner, uses the last saved revision, and is disabled in the UI while edits are unsaved.
+
+Validation: nine backend tests passed, including three PowerPoint cases for editable XML/geometry/media/notes, missing-asset failure and layout warnings. Independent python-pptx read-back reopened the exported two-slide demonstration and verified editable text/shapes and images. The extended Playwright workflow passed actual download, MIME/revision checks and cross-account export rejection. Production build and TypeScript passed. Rendered fidelity in Microsoft PowerPoint/LibreOffice is not yet verified. Text wrapping and rotated bounds require visual review; current preflight warnings cover explicit-line height and unrotated bounds only.
+
+Separate reference investigations are retained under docs/references/gamma, elevenlabs and canva. Actual REA browser attempts failed; direct HTTPS checks returned proxy 403 responses. No product editor observations were obtained. This export increment implements the user's independently specified editable-deck requirement; it is not claimed to reproduce verified Gamma/Canva internals or workflows.

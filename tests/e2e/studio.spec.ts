@@ -1,6 +1,6 @@
 import { test, expect, type Page } from "@playwright/test";
 import { randomUUID } from "node:crypto";
-const origin = "http://localhost:3000";
+const origin = `http://localhost:${process.env.PLAYWRIGHT_PORT || "3000"}`;
 async function signup(page: Page) {
   const email = `pilot-${randomUUID()}@example.test`;
   await page.goto("/");
@@ -75,16 +75,14 @@ test("authenticated course editing, canvas drag, image ownership, history, confl
     ).x,
   ).toBeGreaterThan(300);
   await page.getByRole("button", { name: "▧   Image" }).click();
-  await page
-    .locator("input[type=file]")
-    .setInputFiles({
-      name: "pixel.png",
-      mimeType: "image/png",
-      buffer: Buffer.from(
-        "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aX1kAAAAASUVORK5CYII=",
-        "base64",
-      ),
-    });
+  await page.locator("input[type=file]").setInputFiles({
+    name: "pixel.png",
+    mimeType: "image/png",
+    buffer: Buffer.from(
+      "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8/x8AAwMCAO+aX1kAAAAASUVORK5CYII=",
+      "base64",
+    ),
+  });
   await page.getByLabel("Source / creator").fill("Original test image");
   await page.getByLabel("License / permission").fill("Original work");
   await page.getByRole("button", { name: "Add image", exact: true }).click();
@@ -97,6 +95,25 @@ test("authenticated course editing, canvas drag, image ownership, history, confl
     (o: { type: string }) => o.type === "image",
   ).assetId;
   expect((await page.request.get("/api/assets/" + asset)).status()).toBe(200);
+  const exported = await page.request.get(
+    "/api/courses/" + courseId + "/export",
+  );
+  expect(exported.status()).toBe(200);
+  expect(exported.headers()["content-type"]).toContain(
+    "presentationml.presentation",
+  );
+  expect(exported.headers()["x-presentation-revision"]).toBe(
+    String(imageState.revision),
+  );
+  const pptxBytes = await exported.body();
+  expect(pptxBytes.subarray(0, 2).toString()).toBe("PK");
+  const downloadEvent = page.waitForEvent("download");
+  await page
+    .getByRole("button", { name: "Export PowerPoint", exact: true })
+    .click();
+  expect((await downloadEvent).suggestedFilename()).toBe(
+    "course-presentation.pptx",
+  );
   await page.reload();
   await expect(page.locator("canvas")).toBeVisible();
   await saved(page);
@@ -165,6 +182,9 @@ test("authenticated course editing, canvas drag, image ownership, history, confl
         },
       )
     ).status(),
+  ).toBe(404);
+  expect(
+    (await second.request.get("/api/courses/" + courseId + "/export")).status(),
   ).toBe(404);
   await second.close();
   await page.screenshot({

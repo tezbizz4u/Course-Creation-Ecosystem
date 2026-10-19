@@ -10,7 +10,7 @@ The repository now includes a Next.js/React/TypeScript course studio. The discov
 - Debounced autosave, optimistic revisions, immutable history and restoring an older version as a new revision. Stale saves return 409 and preserve the local draft for download.
 - Private PNG/JPEG assets up to 1 MB with source/license declarations, hashes and owner checks. Assets are stored in PostgreSQL in this milestone; Cloud Storage migration is pending.
 - A real Gemini HTTP adapter for structured slide outlines, timeout/error handling, bounded output and explicit request approval. Provider credentials, model and enablement are required; no live inference was performed.
-- JSON draft download. It references image IDs in the account; it is not a portable media package or PowerPoint export.
+- Editable PowerPoint export with native text/shapes, preserved slide geometry, original embedded images and slide notes. Export uses the last saved revision, checks image ownership, and reports basic layout warnings. JSON draft download remains available and references account image IDs.
 
 This is an original local foundation, not Canva/ElevenLabs parity or the completed production platform. Narration, video, LMS exports, full modules/lessons, background queues, public sharing, email verification, password reset, team roles and Cloud Storage are not implemented. Auth.js is pinned to a beta release; review its stability/security before public launch. Registration is explicitly enabled for local development and disabled by default when the flag is absent.
 
@@ -71,3 +71,7 @@ npm start
 ```
 
 Use Web Preview on port 3000. Leave the process running. If WEB_HOST is unset, copy the actual preview origin into AUTH_URL and restart. The default launcher continues to bind loopback unless STUDIO_BIND_ADDRESS is explicitly supplied. Set AUTH_URL to the browser origin so sign-in and mutation origin checks use the same address.
+
+## PowerPoint export validation
+
+The exporter has structural tests for native text/shapes, geometry, slide count, notes and exact embedded image bytes, plus missing-image failure and basic layout warnings. Independent python-pptx read-back also passed. These are not a visual fidelity guarantee in Microsoft PowerPoint or LibreOffice; rendered cross-application comparison remains unverified. Warnings cover explicit line-height overflow and objects outside slide bounds, not full text wrapping or rotated bounds. Export is disabled while edits are unsaved or saving.

@@ -58,6 +58,7 @@ export default function Studio({
     [generating, setGenerating] = useState(false),
     [outline, setOutline] = useState<Outline | null>(null),
     [approved, setApproved] = useState(false),
+    [exporting, setExporting] = useState(false),
     [uploading, setUploading] = useState(false);
   const revision = useRef(initial.revision),
     undo = useRef<SlideDocument[]>([]),
@@ -210,6 +211,44 @@ export default function Studio({
               }
             >
               Download draft
+            </button>
+            <button
+              disabled={dirty || saving || paused || exporting}
+              className="primary"
+              onClick={async () => {
+                setExporting(true);
+                setError("");
+                try {
+                  const response = await fetch(
+                    "/api/courses/" + initial.id + "/export",
+                  );
+                  if (!response.ok)
+                    throw Error(
+                      (await response.json()).error ||
+                        "PowerPoint export failed.",
+                    );
+                  const warnings = Number(
+                    response.headers.get("X-Presentation-Warnings") || 0,
+                  );
+                  const url = URL.createObjectURL(await response.blob());
+                  const link = document.createElement("a");
+                  link.href = url;
+                  link.download = "course-presentation.pptx";
+                  link.click();
+                  setTimeout(() => URL.revokeObjectURL(url), 1000);
+                  setNotice(
+                    warnings
+                      ? `PowerPoint downloaded with ${warnings} layout warning(s). Check off-slide objects and text boxes before delivery.`
+                      : "Editable PowerPoint downloaded. Review fonts, wrapping, and image placement in your presentation application.",
+                  );
+                } catch (e) {
+                  setError((e as Error).message);
+                } finally {
+                  setExporting(false);
+                }
+              }}
+            >
+              {exporting ? "Exporting…" : "Export PowerPoint"}
             </button>
             <button onClick={history}>Version history</button>
           </div>
@@ -523,9 +562,9 @@ export default function Studio({
         </div>
         <p className="help">
           This foundation supports private courses, slide editing, images,
-          autosave, and version history. PPTX/PDF, narration, video,
-          assessments, and LMS delivery are later milestones. JSON draft
-          downloads reference images stored in your account.
+          autosave, version history, and editable PowerPoint export. PDF,
+          narration, video, assessments, and LMS delivery are later milestones.
+          JSON draft downloads reference images stored in your account.
         </p>
       </div>
       <dialog ref={versionDialog} className="dialog-wide">

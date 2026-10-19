@@ -1,6 +1,6 @@
 # Course Creation Ecosystem
 
-An original Next.js, React and TypeScript course studio. The first local application milestone includes private accounts, persistent projects/courses, a React/Konva presentation editor, private images, versioned autosave/history, and a configurable Gemini text adapter.
+An original Next.js, React and TypeScript course studio. The first local application milestone includes private accounts, persistent projects/courses, a React/Konva presentation editor, private images, versioned autosave/history, native editable PowerPoint export, and a configurable Gemini text adapter.
 
 Confirmed defaults: **CDEM, MASLD, PCOS, Obesity and Hypertension** for **Indian AYUSH practitioners only**, with **Indian English** and **high-quality editable presentations** first. See [course defaults](docs/execution/COURSE-DEFAULTS.md).
 
@@ -30,4 +30,4 @@ npm run test:e2e
 
 AI generation is disabled by default. Configure an approved model, key and spending limits before enabling it; every request requires an explicit user action and approval. No live provider request or Google Cloud deployment has been performed.
 
-This foundation is not the complete media production platform. PPTX/PDF, narration, video, LMS exports, team roles, Cloud Storage and background workers remain on the [roadmap](docs/discovery/roadmap.md). See [implementation validation](docs/IMPLEMENTATION-VALIDATION.md) for the actual tested scope and known limits.
+This foundation is not the complete media production platform. PDF, narration, video, LMS exports, team roles, Cloud Storage and background workers remain on the [roadmap](docs/discovery/roadmap.md). See [implementation validation](docs/IMPLEMENTATION-VALIDATION.md) for the actual tested scope and known limits.
