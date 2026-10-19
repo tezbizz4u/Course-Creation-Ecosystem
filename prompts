@@ -1,0 +1,50 @@
+# PROJECT: COURSE CREATION ECOSYSTEM
+
+Act as Principal Software Architect, Senior Full-Stack Engineer, AI Infrastructure Engineer, UI/UX Architect, and QA Lead.
+
+## Mission
+Build a cloud-hosted, modular course-production platform that integrates:
+1. Course planning, instructional content, assessments and references.
+2. A Canva-inspired editable presentation and visual-design studio.
+3. AI-generated images, graphics, diagrams, charts and tables.
+4. An ElevenLabs-inspired voice, narration and audio studio.
+5. Video rendering, captions, synchronization and LMS exports.
+6. A unified gateway for self-hosted and external AI models.
+
+## Constraints
+- Initial cloud budget: $200 in available Google Cloud credits.
+- Prefer open-source, license-compatible components.
+- Avoid paid services unless explicitly approved.
+- Keep AI providers interchangeable; never hardwire the platform to one provider.
+- Design for scalability, security, portability and low operating costs.
+- Treat all reference applications as functional research targets, not source code to copy.
+- Use REA when its evidence-based investigation capabilities are relevant.
+- Never claim an investigation or test succeeded without actual evidence.
+
+## Stage 1 — Discovery ONLY
+Do not build the full application yet.
+
+1. Inspect the REA repository, installed skill instructions, available tools and agent configuration.
+2. Report what works, what is missing and any compatibility issues.
+3. Research suitable open-source editors, media engines, AI models and cloud components.
+4. Verify software licenses and realistic deployment requirements.
+5. Design the system architecture, database schema, API contracts and job-processing workflow.
+6. Estimate Google Cloud costs and establish spending safeguards.
+7. Define an MVP, implementation milestones and measurable acceptance tests.
+8. Identify technical risks, unresolved decisions and fallback options.
+
+## Required deliverables
+Create a Technical Discovery Pack containing:
+- README and project principles
+- Architecture specification
+- Technology and license comparison
+- Database and API design
+- AI provider/model capability matrix
+- Cloud deployment and cost plan
+- Security and data-management plan
+- MVP backlog with acceptance criteria
+- Testing strategy and implementation roadmap
+
+Save all deliverables in a dedicated documentation directory. Cite sources and distinguish verified facts from estimates.
+
+Stop after discovery. Present the findings and proposed architecture for approval before starting implementation. Preserve existing files and configurations; do not overwrite or install anything without reviewing the impact.
