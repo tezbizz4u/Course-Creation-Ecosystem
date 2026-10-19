@@ -6,11 +6,15 @@ Updated 19 October 2026. This is the current execution plan and supersedes the e
 
 Read [PRODUCT-VISION.md](PRODUCT-VISION.md). The conversational interface and adaptive production orchestrator are the product core. Studios are supporting capabilities, not separate mandatory user workflows. The pipeline below is the first vertical slice, not a restriction on future formats or creative requests.
 
+## Confirmed course defaults
+
+Follow [COURSE-DEFAULTS.md](COURSE-DEFAULTS.md): CDEM, MASLD, PCOS, Obesity and Hypertension for Indian AYUSH practitioners only; Indian English primary; professional editable presentations first. Hindi/bilingual and other Indian languages plus narration/video are subsequent capabilities. The first delivery gate is an excellent editable lesson deck, not a mandatory multimedia bundle.
+
 ## Outcome and scope
 
-One platform contains Course Studio, Visual Design Studio, AI Visual Factory, Voice & Video Studio, and a shared AI Intelligence Layer. They share course context, accounts, assets, provenance and versions. The pilot is one complete CDEM lesson for AYUSH practitioners, followed by one complete course, then the remaining four courses. Do not infer the five-course inventory from the names/count of files in the reference ZIP; inspect its contents before mapping curriculum.
+One platform contains Course Studio, Visual Design Studio, AI Visual Factory, Voice & Video Studio, and a shared AI Intelligence Layer. They share course context, accounts, assets, provenance and versions. The pilot is one complete CDEM lesson for AYUSH practitioners, followed by one complete course, then the remaining four courses. The user has confirmed the five-course inventory in COURSE-DEFAULTS.md. Inspect the supplied documents before mapping their content into that curriculum.
 
-The pilot workflow is: source material → learning objectives → lesson outline/content → editable slides → objective-specific visuals → narration → captions/timeline → rendered video → reviewed deck and lesson package.
+The initial pilot workflow is: conversational brief → source material/research → learning objectives → lesson outline/content → editable slides and objective-specific visuals → design/content checks → editable PPTX. Narration, captions, video and interactive activities extend that pipeline after the presentation milestone.
 
 ## Current baseline
 
@@ -69,6 +73,8 @@ Build the prioritized Canva-derived workflows in small complete slices: reusable
 Add portable editable PPTX and PDF exports. Keep a documented slide schema independent of a canvas library. Preserve fonts, geometry, citations and asset provenance. Adopt rendering/editor dependencies only after license and compatibility checks.
 
 Completion: a CDEM lesson deck can be created, edited, reloaded and exported. PowerPoint objects remain editable in independent viewers. PDF page count/text and visual comparisons pass. Large text, missing fonts and asset failures produce actionable feedback.
+
+The first delivery milestone combines the validated course/brief foundation, core visual production and the visual assets needed for one high-quality English CDEM lesson deck. Phases 4–6 describe subsequent capability expansion; do not hold the presentation release for unfinished voice/video work.
 
 ## Phase 4 — AI Visual Factory
 

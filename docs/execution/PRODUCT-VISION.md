@@ -8,6 +8,10 @@ The product is one conversational production environment that transforms an open
 
 This specification refines the execution plan. Existing Forma screens are supporting editing capabilities, not the completed user experience. The required engineering order remains REA investigation → original implementation → testing → deployment, without repeated phase approvals.
 
+## Confirmed initial course portfolio and priorities
+
+Apply [COURSE-DEFAULTS.md](COURSE-DEFAULTS.md): CDEM, MASLD, PCOS, Obesity and Hypertension; Indian AYUSH practitioners only; Indian English first; highest-quality editable presentations as the primary deliverable. Hindi, bilingual delivery, additional Indian languages and media formats follow. These priorities focus the first release without limiting the ultimate vision.
+
 ## Experience
 
 1. Accept a free-form description plus optional files, examples and sources. Ask only questions that materially affect the result; reuse existing answers and make reasonable defaults visible and editable.
@@ -69,7 +73,7 @@ Automatic checks do not certify all factual or pedagogical claims. Surface uncer
 
 ## First complete demonstration
 
-Use one CDEM lesson as a bounded vertical slice. From a conversational brief, produce an objective-linked plan, source-grounded lesson, editable deck and suitable diagram, narration, synchronized captioned video and a knowledge check. Accept a natural-language revision, regenerate affected artifacts, and export the validated deliverables. The architecture must preserve the ability to produce documents or interactive lessons instead of requiring every future project to use this sequence.
+Use one CDEM lesson as the first bounded vertical slice: conversational brief → objective-linked learning plan → reliable-source research → professional editable lesson deck → conversational revision → validated PPTX. Retain structured source, assets, citations and version history. Complete this primary presentation milestone before requiring narrated video or quizzes. Then extend the same project model to narration, captions, video, assessments and interactive formats as added capabilities. The architecture must support alternative learning formats without forcing every project into a slide/video sequence.
 
 Research the relevant Canva and ElevenLabs workflows through REA before implementing their comparable production capabilities. Use additional reference targets only where they answer a concrete missing workflow question; record observed evidence separately from our original design decisions.
 

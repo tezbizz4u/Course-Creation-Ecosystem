@@ -2,6 +2,8 @@
 
 An original Next.js, React and TypeScript course studio. The first local application milestone includes private accounts, persistent projects/courses, a React/Konva presentation editor, private images, versioned autosave/history, and a configurable Gemini text adapter.
 
+Confirmed defaults: **CDEM, MASLD, PCOS, Obesity and Hypertension** for **Indian AYUSH practitioners only**, with **Indian English** and **high-quality editable presentations** first. See [course defaults](docs/execution/COURSE-DEFAULTS.md).
+
 The governing [product vision](docs/execution/PRODUCT-VISION.md) is one conversational, adaptive course-production platform. The existing editor is an early supporting capability.
 
 Follow the current [execution plan](docs/execution/ACTION-PLAN.md) for REA investigation, implementation, testing and deployment. No further phase approvals are required.
