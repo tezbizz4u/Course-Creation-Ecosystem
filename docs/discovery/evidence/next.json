@@ -1,0 +1,12 @@
+{
+  "name": "next",
+  "version": "16.4.2",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "repository": {
+    "url": "git+https://github.com/vercel/next.js.git",
+    "type": "git"
+  }
+}

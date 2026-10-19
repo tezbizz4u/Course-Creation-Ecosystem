@@ -1,0 +1,8 @@
+{
+  "name": "remotion",
+  "version": "4.0.536",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "url": "https://github.com/remotion-dev/remotion/tree/main/packages/core"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "konva",
+  "version": "10.9.0",
+  "license": "MIT",
+  "engines": null,
+  "repository": {
+    "url": "git://github.com/konvajs/konva.git",
+    "type": "git"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "checked_on": "2026-10-19",
+  "sources": [
+    {
+      "name": "next",
+      "url": "https://registry.npmjs.org/next/latest",
+      "status": 200,
+      "metadata": {
+        "name": "next",
+        "version": "16.4.2",
+        "license": "MIT",
+        "engines": {
+          "node": ">=20.9.0"
+        },
+        "repository": {
+          "url": "git+https://github.com/vercel/next.js.git",
+          "type": "git"
+        }
+      }
+    },
+    {
+      "name": "react",
+      "url": "https://registry.npmjs.org/react/latest",
+      "status": 200,
+      "metadata": {
+        "name": "react",
+        "version": "19.3.1",
+        "license": "MIT",
+        "engines": {
+          "node": ">=0.10.0"
+        },
+        "repository": {
+          "url": "git+https://github.com/react/react.git",
+          "type": "git",
+          "directory": "packages/react"
+        }
+      }
+    },
+    {
+      "name": "fabric",
+      "url": "https://registry.npmjs.org/fabric/latest",
+      "status": 200,
+      "metadata": {
+        "name": "fabric",
+        "version": "7.4.0",
+        "license": "MIT",
+        "engines": {
+          "node": ">=20.0.0"
+        },
+        "repository": {
+          "url": "git+https://github.com/fabricjs/fabric.js.git",
+          "type": "git"
+        }
+      }
+    },
+    {
+      "name": "konva",
+      "url": "https://registry.npmjs.org/konva/latest",
+      "status": 200,
+      "metadata": {
+        "name": "konva",
+        "version": "10.9.0",
+        "license": "MIT",
+        "engines": null,
+        "repository": {
+          "url": "git://github.com/konvajs/konva.git",
+          "type": "git"
+        }
+      }
+    },
+    {
+      "name": "bullmq",
+      "url": "https://registry.npmjs.org/bullmq/latest",
+      "status": 200,
+      "metadata": {
+        "name": "bullmq",
+        "version": "6.3.17",
+        "license": "MIT",
+        "engines": {
+          "node": ">=14.17.0"
+        },
+        "repository": {
+          "url": "git+https://github.com/taskforcesh/bullmq.git",
+          "type": "git"
+        }
+      }
+    },
+    {
+      "name": "auth",
+      "url": "https://registry.npmjs.org/@auth/core/latest",
+      "status": 200,
+      "metadata": {
+        "name": "@auth/core",
+        "version": "0.41.3",
+        "license": "ISC",
+        "engines": null,
+        "repository": {
+          "url": "git+https://github.com/nextauthjs/next-auth.git",
+          "type": "git"
+        }
+      }
+    },
+    {
+      "name": "pptxgenjs",
+      "url": "https://registry.npmjs.org/pptxgenjs/latest",
+      "status": 200,
+      "metadata": {
+        "name": "pptxgenjs",
+        "version": "4.0.1",
+        "license": "MIT",
+        "engines": null,
+        "repository": {
+          "url": "git+https://github.com/gitbrent/PptxGenJS.git",
+          "type": "git"
+        }
+      }
+    },
+    {
+      "name": "remotion",
+      "url": "https://www.remotion.dev/docs/license",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "ffmpeg",
+      "url": "https://ffmpeg.org/legal.html",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "cloud-run-pricing",
+      "url": "https://cloud.google.com/run/pricing",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "budgets",
+      "url": "https://cloud.google.com/billing/docs/how-to/budgets",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "cloud-run-jobs",
+      "url": "https://cloud.google.com/run/docs/create-jobs",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "google-trial",
+      "url": "https://cloud.google.com/free/docs/free-cloud-features",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "gemini",
+      "url": "https://ai.google.dev/gemini-api/docs/text-generation",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "postgres-license",
+      "url": "https://www.postgresql.org/about/licence/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "valkey",
+      "url": "https://valkey.io/topics/faq/",
+      "error": "<urlopen error Tunnel connection failed: 403 Forbidden>"
+    },
+    {
+      "name": "rea-source",
+      "url": "https://github.com/morluto/rea",
+      "commit": "a0edd145d31ffeb9f022c25ec9e9131083f563d5",
+      "status": "git clone succeeded"
+    },
+    {
+      "name": "remotion-license-fallback",
+      "url": "https://raw.githubusercontent.com/remotion-dev/remotion/v4.0.536/LICENSE.md",
+      "status": 200,
+      "local_file": "remotion-license.txt"
+    },
+    {
+      "name": "postgres-license-fallback",
+      "url": "https://raw.githubusercontent.com/postgres/postgres/REL_18_STABLE/COPYRIGHT",
+      "status": 200,
+      "local_file": "postgres-license.txt",
+      "limitation": "branch is mutable; retained text is the retrieved evidence"
+    },
+    {
+      "name": "valkey-license-fallback",
+      "url": "https://raw.githubusercontent.com/valkey-io/valkey/unstable/COPYING",
+      "status": 200,
+      "local_file": "valkey-license.txt",
+      "limitation": "branch is mutable; retained text is the retrieved evidence"
+    }
+  ]
+}

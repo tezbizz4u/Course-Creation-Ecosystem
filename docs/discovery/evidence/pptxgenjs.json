@@ -1,0 +1,10 @@
+{
+  "name": "pptxgenjs",
+  "version": "4.0.1",
+  "license": "MIT",
+  "engines": null,
+  "repository": {
+    "url": "git+https://github.com/gitbrent/PptxGenJS.git",
+    "type": "git"
+  }
+}

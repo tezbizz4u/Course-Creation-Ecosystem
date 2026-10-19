@@ -1,0 +1,13 @@
+{
+  "name": "react",
+  "version": "19.3.1",
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {
+    "url": "git+https://github.com/react/react.git",
+    "type": "git",
+    "directory": "packages/react"
+  }
+}
