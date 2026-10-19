@@ -2,6 +2,10 @@
 
 Updated 19 October 2026. This is the current execution plan and supersedes the earlier discovery-only approval gate. The user has authorized proceeding without further phase approvals. The order is **REA investigation → original implementation → meaningful testing → deployment**.
 
+## Governing product specification
+
+Read [PRODUCT-VISION.md](PRODUCT-VISION.md). The conversational interface and adaptive production orchestrator are the product core. Studios are supporting capabilities, not separate mandatory user workflows. The pipeline below is the first vertical slice, not a restriction on future formats or creative requests.
+
 ## Outcome and scope
 
 One platform contains Course Studio, Visual Design Studio, AI Visual Factory, Voice & Video Studio, and a shared AI Intelligence Layer. They share course context, accounts, assets, provenance and versions. The pilot is one complete CDEM lesson for AYUSH practitioners, followed by one complete course, then the remaining four courses. Do not infer the five-course inventory from the names/count of files in the reference ZIP; inspect its contents before mapping curriculum.
@@ -46,7 +50,9 @@ Verify the canonical target before observations. Investigate script entry, langu
 
 Completion: each prioritized workflow is observed with evidence, partially observed, or concretely blocked. There must be an explicit record for every workflow, not a claim that both entire products were reverse engineered.
 
-## Phase 2 — Shared course and AI foundation
+## Phase 2 — Conversational production orchestrator and shared foundation
+
+Implement free-form brief intake, focused Q&A, editable assumptions, a capability registry, a dependency-based production plan, progress/artifact views and conversational revisions with targeted regeneration. Preserve open requirements when a capability is unavailable; do not silently substitute outputs.
 
 Implement proper course → module → lesson → objective structure; source references and assessments; shared private assets with ownership, license/source metadata and versions. Retain existing courses through versioned migrations.
 
@@ -54,7 +60,7 @@ Build provider-independent task contracts for text, image, speech, transcription
 
 Evaluate self-hosted language and specialist models against exact license/weight terms, supported languages, hardware, memory, latency and output quality. A language model coordinates tasks; image, speech and video need appropriate engines. Compare a CPU development route and on-demand cloud compute using measurements before choosing deployment sizes. No permanently running GPU during the pilot.
 
-Completion: real course hierarchy persists; unauthorized access fails; stale updates cannot overwrite work; one real generation task completes and records provenance/usage; duplicate submission does not run it twice. Fake providers remain confined to tests.
+Completion: a plain-language request becomes a versioned brief and executable production graph; a conversational revision updates the correct dependent artifacts; real course hierarchy persists; unauthorized access fails; stale updates cannot overwrite work; one real generation task completes and records provenance/usage; duplicate submission does not run it twice. Fake providers remain confined to tests.
 
 ## Phase 3 — Visual Design Studio
 
